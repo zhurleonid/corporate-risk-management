@@ -1,0 +1,33 @@
+# MF 731 Corporate Risk Management - shared environment for all homeworks.
+# Python 3.12 (I am on 3.12.7).
+#
+# Lower bounds rather than exact pins, so this keeps working as the semester
+# goes on. The comment on each line is the version I actually ran.
+
+numpy>=1.26          # ran on 2.5.3
+pandas>=2.2          # ran on 3.0.6
+matplotlib>=3.9      # ran on 3.11.2
+scipy>=1.13          # ran on 1.18.1
+
+# running the notebooks
+notebook>=7.2        # ran on 7.6.3
+ipykernel>=6.29      # ran on 7.3.0
+
+# exporting the submission notebook to PDF.
+#   jupyter nbconvert --to webpdf hw1_submission.ipynb
+# needs the browser fetched once:
+#   python -m playwright install chromium
+nbconvert[webpdf]>=7.16   # ran on nbconvert 7.17.1, playwright 1.63.0
+
+# VS Code's "Export to PDF" uses nbconvert's LaTeX route instead, which needs
+# two things pip cannot install:
+#   brew install pandoc          (without it: PandocMissing)
+#   a TeX distribution, e.g. MacTeX, for xelatex
+# Note: markdown pipe tables break that route - pandoc 3.x renders them as
+# longtable and the export dies with "No counter 'none' defined". Write tables
+# as $$\begin{array}{...}$$ instead; those work in both routes.
+
+# Optional, add as needed:
+# yfinance>=0.2       # re-downloading price data instead of using a saved csv
+# arch>=7.0           # reference GARCH implementation to check a hand-rolled fit
+# statsmodels>=0.14   # time series tests, regressions

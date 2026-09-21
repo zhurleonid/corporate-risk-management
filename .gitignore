@@ -1,0 +1,28 @@
+# virtual environments
+.venv/
+venv/
+env/
+
+# python
+__pycache__/
+*.py[cod]
+.ipython/
+
+# jupyter
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+
+# LaTeX leftovers from nbconvert --to pdf
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+notebook.tex
+
+# macOS
+.DS_Store
+
+# editors
+.idea/
+*.swp
