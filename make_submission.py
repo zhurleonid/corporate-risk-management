@@ -55,7 +55,7 @@ def main():
     cells.append({
         "cell_type": "markdown",
         "metadata": {},
-        "source": SEPARATOR.split("\n"),
+        "source": SEPARATOR.splitlines(keepends=True),
     })
 
     # Keep the code cells and anything they printed. Drop the code notebook's

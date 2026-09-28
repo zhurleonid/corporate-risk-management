@@ -10,6 +10,7 @@ Leonid Zhuravlev
 | | Topic | Code | Write-up |
 | --- | --- | --- | --- |
 | [Homework 1](homework_1/) | Volatility of SPY: MA(100), EWMA(0.94), GARCH(1,1) fit and forecast | [hw1_code.ipynb](homework_1/hw1_code.ipynb) | [hw1_written.ipynb](homework_1/hw1_written.ipynb) |
+| [Homework 2](homework_2/) | Full, linearized and second order loss operators for a delta-hedged short put, Monte Carlo loss distribution | [hw2_code.ipynb](homework_2/hw2_code.ipynb) | [hw2_written.ipynb](homework_2/hw2_written.ipynb) |
 
 ## How a homework is put together
 
