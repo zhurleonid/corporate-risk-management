@@ -18,6 +18,11 @@ homework_N/
     *.csv                 any data the notebook needs, saved so it runs offline
 ```
 
+When an assignment comes as several problem sheets (Homework 3), each sheet
+gets its own self-contained sub-folder, `homework_N/partK_<topic>/`, with the
+same four files named `hwN_partK_*` and its own data. Run the build steps
+below from inside the sub-folder.
+
 Two source notebooks, one generated. `hwN_code.ipynb` holds only code and
 comments. `hwN_written.ipynb` holds everything written - pseudocode,
 derivations, figures and results - with the figures embedded so it stands on its
@@ -80,6 +85,17 @@ To get the submission PDF, export the merged notebook:
 ```
 jupyter nbconvert --to webpdf hw1_submission.ipynb
 ```
+
+When part of the work is handwritten, the scanned pages go in front. Export
+the notebook under its own name and join the two with `pdfunite` (poppler):
+
+```
+jupyter nbconvert --to webpdf hwN_submission.ipynb --output hwN_notebook
+pdfunite <handwritten scan>.pdf hwN_notebook.pdf hwN_submission.pdf
+```
+
+`hwN_submission.pdf` is then the one file that goes to Blackboard; Homework 3
+is built this way, one scan per part.
 
 `--to webpdf` needs `pip install nbconvert[webpdf]` plus
 `python -m playwright install chromium` the first time. Exporting via `--to

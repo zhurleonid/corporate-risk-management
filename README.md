@@ -11,6 +11,8 @@ Leonid Zhuravlev
 | --- | --- | --- | --- |
 | [Homework 1](homework_1/) | Volatility of SPY: MA(100), EWMA(0.94), GARCH(1,1) fit and forecast | [hw1_code.ipynb](homework_1/hw1_code.ipynb) | [hw1_written.ipynb](homework_1/hw1_written.ipynb) |
 | [Homework 2](homework_2/) | Full, linearized and second order loss operators for a delta-hedged short put, Monte Carlo loss distribution | [hw2_code.ipynb](homework_2/hw2_code.ipynb) | [hw2_written.ipynb](homework_2/hw2_written.ipynb) |
+| [Homework 3](homework_3/) | Three sheets, one sub-folder each: [Part 1](homework_3/part1_var_estimation/) VaR of a market-cap-weighted MSFT/AAPL/GOOGL portfolio (historical and normal-EWMA); [Part 2](homework_3/part2_var_backtest/) backtesting one-day VaR on the S&P 500; [Part 3](homework_3/part3_var_10day/) 10-day VaR of a delta-hedged short put vs the square-root-of-time rule | [part1](homework_3/part1_var_estimation/hw3_part1_code.ipynb), [part2](homework_3/part2_var_backtest/hw3_part2_code.ipynb), [part3](homework_3/part3_var_10day/hw3_part3_code.ipynb) | [part1](homework_3/part1_var_estimation/hw3_part1_written.ipynb), [part2](homework_3/part2_var_backtest/hw3_part2_written.ipynb), [part3](homework_3/part3_var_10day/hw3_part3_written.ipynb) |
+| [Homework 4](homework_4/) | Expected shortfall: normal, discrete and loan-portfolio examples, VaR monotonicity, exponential and Pareto losses. No code: the whole sheet is pencil-and-paper, so the submission is handwritten | - | - |
 
 ## How a homework is put together
 
@@ -72,6 +74,8 @@ make_submission.py        merges the written + code notebooks
 submission_criteria.md    the course's submission rules
 .vscode/settings.json     points VS Code at .venv (its PDF export needs this)
 homework_N/               one folder per assignment
+homework_N/partK_*/       when an assignment comes as several sheets, one
+                          self-contained sub-folder per sheet (Homework 3)
 ```
 
 `.venv/` is gitignored — build your own from `requirements.txt`.

@@ -26,3 +26,7 @@ notebook.tex
 # editors
 .idea/
 *.swp
+
+# hand-derivation notes, not part of the submission
+homework_*/**/hw*_derivations.*
+homework_*/hw*_derivations.*
